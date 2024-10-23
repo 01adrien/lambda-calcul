@@ -1,0 +1,23 @@
+<expression> ::= <name> | <function> | <application>
+<function> ::= λ<name>.<body>
+<body> ::= <expression>
+<application> ::= (<function expression> <argument expression>)
+<function expression> ::= <expression>
+<argument expression> ::= <expression>
+
+
+-- STD Functions
+
+def identity   = λx.x
+def self_apply = λs.(s s)
+def apply      = λfunc.λarg.(func arg)
+def first      = λfirst.λsecond.first
+def second     = λfirst.λsecond.second
+
+
+
+-- EXAMPLE --
+(λf.(f λx.x) λs.(s s))
+(λs.(s s) λx.x)
+(λx.x λx.x)
+λx.x
