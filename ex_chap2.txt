@@ -1,0 +1,22 @@
+------------ EX 2 -------------
+
+- 1 :
+    ((λx.λy.(y x) λp.λq.p) λi.i)
+    (λy (y λp.λq.p) λi.i)
+    (λi.i λp.λq.p)
+    λp.λq.p
+
+- 2 :
+    (((λx.λy.λz.((x y) z) λf.λa.(f a)) λi.i) λj.j)
+    ((λy.λz.((λf.λa.(f a) y) z) λi.i) λj.j) 
+    (λz.((λf.λa.(f a) λi.i) z) λj.j)
+    ((λf.λa.(f a) λi.i) λj.j)
+    (λa.(λi.i a) λj.j)
+    (λi.i λj.j)
+    λi.i
+
+- 3 :
+    (λh.((λa.λf.(f a) h) h) λf.(f f))
+    ((λa.λf.(f a) λf.(f f)) λf.(f f))
+    (λf.(f λf.(f f)) λf.(f f))
+    (λf.(f f) λf.(f f)) => infinite loop application of self application to itself
