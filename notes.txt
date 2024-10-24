@@ -17,3 +17,37 @@ def not        = λx.((x false) true)
 λx.x
 
 
+Bonjour,
+Je m'appelle Adrien et j' ai 34 ans.
+Ça fait un an que j'habite en Belgique j'y suis venu pour reprendre des études.
+Actuellement je suis donc étudiant en cours du soir pour un bachelier en informatique à l'EPFC (3-4 soirs/semaine + samedi matin).
+A côté de ça je travaille pour une ASBL qui fait de l' art et de l'artisanat avec les habitants des quartiers populaires bruxellois.
+Je ne pourrais amenager dans mon prochain logement qu'a compter de fevrier d'ou mon souhait de louer votre chambre pour 3 mois.
+Je suis plutot calme et ordoné.
+J’aime bien bricoler, cuisiner, écrire du code, bouquiner (entre autres...).
+
+Je suis tout à fait dispo pour vous rencontrer et me présenter un peu plus
+
+A bientôt 
+
+
+Adrien
+
+
+
+Voici ton texte corrigé :
+
+Bonjour,
+
+Je m'appelle Adrien et j'ai 34 ans. Ça fait un an que j'habite en Belgique ; j'y suis venu pour reprendre des études. 
+Actuellement, je suis donc étudiant en cours du soir pour un bachelier en informatique à l'EPFC (3-4 soirs/semaine + samedi matin).
+À côté de ça, je travaille pour une ASBL qui fait de l'art et de l'artisanat avec les habitants des quartiers populaires bruxellois. 
+Je ne pourrai aménager dans mon prochain logement qu'à compter de février, d'où mon souhait de louer votre chambre pour 3 mois.
+Je suis plutôt calme et ordonné. J’aime bien bricoler, cuisiner, écrire du code, bouquiner (entre autres...).
+
+Je suis tout à fait disponible pour vous rencontrer et me présenter un peu plus.
+
+À bientôt,
+
+Adrien
+
