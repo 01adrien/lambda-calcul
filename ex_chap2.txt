@@ -20,3 +20,10 @@
     ((λa.λf.(f a) λf.(f f)) λf.(f f))
     (λf.(f λf.(f f)) λf.(f f))
     (λf.(f f) λf.(f f)) => infinite loop application of self application to itself
+
+
+------------ EX 3 -------------
+
+identity = (apply (apply identity))
+	 = (λx.λy.(x y) (λx.λy.(x y) λx.x))
+	 = (λx.λy.(x y) (λy.(λx.x y)))

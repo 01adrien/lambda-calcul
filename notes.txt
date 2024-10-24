@@ -5,12 +5,15 @@ def self_apply = λs.(s s)
 def apply      = λfunc.λarg.(func arg)
 def first      = λfirst.λsecond.first
 def second     = λfirst.λsecond.second
-
-
+def cond       = λe1.λe2.λc.((c e1) e2)
+def true       = select_first
+def false      = select_second
+def not        = λx.((x false) true)
 
 -- EXAMPLE --
 (λf.(f λx.x) λs.(s s))
 (λs.(s s) λx.x)
 (λx.x λx.x)
 λx.x
+
 
