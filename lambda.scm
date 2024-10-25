@@ -47,10 +47,6 @@
   (lambda (x) (lambda (y) ((x true) y))))
 
 
-;; representation of 0
-(define zero id)
-
-
 ;; λn.λs.((s false) n)
 (define successor
   (lambda (n) (lambda (s) ((s false) n))))
@@ -73,20 +69,48 @@
 
 
 ;; λx.λy.(x y (not y))
-(define equal?
+(define bool-equal?
   (lambda (x) (lambda (y) (x y (not y)))))
 
 
+;; same as pair but args in different order
+(define IF
+  (lambda (c) (lambda (e1) (lambda (e2) ((c e1)  e2)))))
+
+
+;; number 0 => 10
+;;(define zero (lambda() (id)))
+(define zero id)
 (define one (successor zero))
 (define two (successor one))
 (define three (successor two))  
+(define four (lambda() (successor three)))
+(define five (lambda() (successor four)))
+(define six (lambda() (successor five)))  
+(define seven (lambda() (successor six)))
+(define eight (lambda() (successor seven)))
+(define nine (lambda() (successor eight)))  
+(define ten (lambda() (successor nine)))
 
 
-;; main function
-(define main
-  (lambda ()
-    (predecessor one)
-    ))
 
+(define value 5)
 
-(display (main))
+(define lazy-add
+  (lambda (f)
+    (lambda (x)
+      (lambda (y)
+	(display "HELLO ")
+	 (((IF (zero? y)) x) (((f f) (successor x)) (predecessor y)))))))
+
+(define add (lazy-add lazy-add))
+
+;;      (((_if (zero? y)) x) ((add (successor x)) (predecessor y)))
+
+(display one)
+(newline)
+;;(display (zero? (one)))
+;;(display (((if (zero? (one))) "ZERO") "NOT ZERO"))
+(define res ((add two) two))
+(display res)
+;;(display (main))
